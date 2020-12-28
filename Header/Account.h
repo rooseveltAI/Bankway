@@ -2,14 +2,16 @@
 #include <string>
 #include "Transaction.h"
 
-class Account {
+class Account
+{
 private:
     int balance;
     std::vector<Transaction> log;
+
 public:
-Account();
-std::vector<std::string> Report();
-bool Deposit(int amount);
-bool Withdraw(int amount);
-int GetBalance() {return balance;}
+    Account();
+    std::vector<std::string> Report();
+    bool Deposit(int amount);
+    bool Withdraw(int amount);
+    int GetBalance() { return balance; }
 };
